@@ -13,6 +13,12 @@ npm run dev
 I just needed to do a presentation and wanted to use Markdown.
 So i built this to make it easier.
 
+**Initial page example**
+![cover-example](./src/assets/print-1.png)
+
+**Slide page example**
+[!slide-example](./src/assets/print-2.png)
+
 ## How to use it
 Each Markdown file in `/pages/` folder is a slide page and has its onw route, like `localhost/slide-1`.
 
