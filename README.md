@@ -1,7 +1,7 @@
 # ASWA - Slide Presentation With Astro
-Yes there is a typo.
+Yes, there is a typo.
 
-## To start
+## How to start
 ```sh
 npm install
 ```
@@ -13,15 +13,15 @@ npm run dev
 I just needed to do a presentation and wanted to use Markdown.
 So i built this to make it easier.
 
-## How
-Each Markdown file in `/pages/` folder is a slide page.
+## How to use it
+Each Markdown file in `/pages/` folder is a slide page and has its onw route, like `localhost/slide-1`.
 
 1. Add every MD file in `src/pages/` folder.
 2. Every file should be named as `slide-<index>.md`.
 3. Every file should have `title`, `layout` and `index` properties.
 4. The `layout` prop should point to the `BaseLayout.astro` layout file, or you can create your own.
 
-Folder structure example:
+**Folder structure example:**
 ```bash
 - src
     - pages
@@ -29,8 +29,9 @@ Folder structure example:
         - slide-2.md
         - slide-3.md
 ```
+> As said in steps 1 and 2.
 
-File properties example:
+**File properties example:**
 ```markdown
 ---
 title: first-slide
@@ -41,6 +42,9 @@ index: 1
 Make presentations easier with markdown files.
 
 ```
+> As said in steps 3 and 4.
+
+___
 
 ## If you don't know Astro
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
