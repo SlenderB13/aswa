@@ -1,0 +1,33 @@
+---
+import Header from "../components/Header.astro"
+import Prose from "../components/Prose.astro"
+import Footer from "../components/Footer.astro"
+import Layout from "./Layout.astro"
+
+const {frontmatter} = Astro.props;
+
+const slides = import.meta.glob('../pages/**/*.{md,mdx}')
+const slidesSize = Object.keys(slides).length
+---
+
+<Layout>
+	<Header />
+	<div class="w-full md:w-1/2 mx-auto flex flex-col gap-12 p-4">
+		<Prose>
+			<slot />
+		</Prose>
+		<div class="flex items-center justify-between w-full">
+			<a href=`/slide-${frontmatter.index - 1}`>
+				<button class=`px-8 py-2 text-white bg-black hover:-translate-x-1 transition-all rounded-full border-1 ${frontmatter.index == 1 && "invisible"}`>
+					Previous
+				</button>
+			</a>
+			<a href=`/slide-${frontmatter.index + 1}`>
+				<button class=`px-8 py-2 text-white bg-black hover:translate-x-1 transition-all rounded-full border-1 ${frontmatter.index == slidesSize && "invisible"}`>
+					Next
+				</button>
+			</a>
+		</div>
+	</div>
+	<Footer />
+</Layout>
