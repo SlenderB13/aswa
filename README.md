@@ -1,9 +1,48 @@
-# Astro Starter Kit: Basics
+# ASWA - Slide Presentation With Astro
+Yes there is a typo.
 
+## To start
 ```sh
-npm create astro@latest -- --template basics
+npm install
+```
+```sh
+npm run dev
 ```
 
+## Objective
+I just needed to do a presentation and wanted to use Markdown.
+So i built this to make it easier.
+
+## How
+Each Markdown file in `/pages/` folder is a slide page.
+
+1. Add every MD file in `src/pages/` folder.
+2. Every file should be named as `slide-<index>.md`.
+3. Every file should have `title`, `layout` and `index` properties.
+4. The `layout` prop should point to the `BaseLayout.astro` layout file, or you can create your own.
+
+Folder structure example:
+```bash
+- src
+    - pages
+        - slide-1.md
+        - slide-2.md
+        - slide-3.md
+```
+
+File properties example:
+```markdown
+---
+title: first-slide
+layout: "../layouts/BaseLayout.astro"
+index: 1
+---
+## Objective
+Make presentations easier with markdown files.
+
+```
+
+## If you don't know Astro
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
