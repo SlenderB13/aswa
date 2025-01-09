@@ -17,7 +17,7 @@ So i built this to make it easier.
 ![cover-example](./src/assets/print-1.png)
 
 **Slide page example**
-[!slide-example](./src/assets/print-2.png)
+![slide-example](./src/assets/print-2.png)
 
 ## How to use it
 Each Markdown file in `/pages/` folder is a slide page and has its onw route, like `localhost/slide-1`.
